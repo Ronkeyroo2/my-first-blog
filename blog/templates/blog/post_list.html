@@ -15,3 +15,10 @@
 		<p>Because there's still 2 and a half hours to go! So buckle up buttercup and enjoy the rest of your flight!</p>
     </body>
 </html>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
